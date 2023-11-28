@@ -168,7 +168,7 @@ def lambda_handler(event, context):
 def prepare_new_tags(tags):
     newTags = []
 
-    if find_tag(tags, "Name") == None:
+    if find_tag(tags, "Name") is None:
         newTags.append({'Key': 'Name', 'Value': tag_Name})
 
     if find_tag(tags, "Application") != tag_Application:
